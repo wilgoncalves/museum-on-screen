@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_principal">
+
+    <fragment
+        android:id="@+id/nav_principal"
+        android:name="com.williangoncalves.museumonscreen.ui.principal.PrincipalFragment"
+        android:label="@string/menu_principal"
+        tools:layout="@layout/fragment_principal" />
+
+    <fragment
+        android:id="@+id/nav_artistas"
+        android:name="com.williangoncalves.museumonscreen.ui.artistas.ArtistasFragment"
+        android:label="@string/menu_artistas"
+        tools:layout="@layout/fragment_artistas" />
+
+    <fragment
+        android:id="@+id/nav_historia"
+        android:name="com.williangoncalves.museumonscreen.ui.historia.HistoriaFragment"
+        android:label="@string/menu_historia"
+        tools:layout="@layout/fragment_historia" />
+
+    <fragment
+        android:id="@+id/nav_contato"
+        android:name="com.williangoncalves.museumonscreen.ui.contato.ContatoFragment"
+        android:label="@string/menu_contato"
+        tools:layout="@layout/fragment_contato" />
+
+    <fragment
+        android:id="@+id/nav_sobre"
+        android:name="com.williangoncalves.museumonscreen.ui.sobre.SobreFragment"
+        android:label="@string/menu_sobre"
+        tools:layout="@layout/fragment_sobre" />
+</navigation>
