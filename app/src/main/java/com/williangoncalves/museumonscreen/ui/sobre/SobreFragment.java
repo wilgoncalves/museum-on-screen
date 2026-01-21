@@ -10,6 +10,9 @@ import android.view.ViewGroup;
 
 import com.williangoncalves.museumonscreen.R;
 
+import mehdi.sakout.aboutpage.AboutPage;
+import mehdi.sakout.aboutpage.Element;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link SobreFragment#newInstance} factory method to
@@ -60,7 +63,23 @@ public class SobreFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sobre, container, false);
+
+        String descricao = "Museum On Screen é uma plataforma criada para facilitar o acesso " +
+                "à obras de artes por pessoas no mundo inteiro.";
+
+        Element versao = new Element();
+        versao.setTitle("Versão 1.0");
+
+        return new AboutPage(getActivity())
+                .setImage(R.drawable.logo)
+                .setDescription(descricao)
+                .addGroup("Entre em contato")
+                .addEmail("contato@museumonscreen.com", "Envie um e-mail")
+                .addWebsite("https://www.google.com/", "Acesse nosso site")
+                .addGroup("Nossas redes sociais")
+                .addInstagram("itswilliangoncalves", "Instagram")
+                .addYoutube("williangoncalves", "Youtube")
+                .addItem(versao)
+                .create();
     }
 }
