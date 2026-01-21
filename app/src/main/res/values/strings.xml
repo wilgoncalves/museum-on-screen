@@ -13,5 +13,15 @@
     <string name="menu_contato">Contato</string>
     <string name="menu_sobre">Sobre</string>
 
+    <string name="text_o_grito">O Grito, Edvard Munch</string>
+    <string name="desc_o_grito">Para muitos, a obra expressionista "O Grito", pintada pelo menos
+        quatro vezes pelo artista norueguês Edvard Munch entre o final do século 19 e a primeira
+        década do século 20, seria uma amostra perfeita da angústia do homem moderno. O rosto
+        assustador de um ser de feição cadavérica sobre uma ponte e com um céu cor de fogo às suas
+        costas tornou-se uma das figuras mais conhecidas (e parodiadas) no mundo das artes: a criação
+        de Munch é inspiração para trabalhos que vão de telas de Andy Warhol ao cartaz do filme
+        "Esqueceram de Mim".</string>
+    <string name="ref_o_grito">Referência: https://viagemeturismo.abril.com.br/mundo/os-museus-onde-estao-alguns-dos-quadros-mais-famosos-do-mundo/</string>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
