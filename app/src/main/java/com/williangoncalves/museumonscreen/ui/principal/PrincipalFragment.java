@@ -3,12 +3,16 @@ package com.williangoncalves.museumonscreen.ui.principal;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.williangoncalves.museumonscreen.R;
+import com.williangoncalves.museumonscreen.adapter.AdapterPrincipal;
+import com.williangoncalves.museumonscreen.databinding.FragmentPrincipalBinding;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,6 +29,9 @@ public class PrincipalFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private FragmentPrincipalBinding binding;
+    private RecyclerView recyclerViewPrincipal;
 
     public PrincipalFragment() {
         // Required empty public constructor
@@ -60,7 +67,23 @@ public class PrincipalFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_principal, container, false);
+
+        // Inflar o binding do fragment
+        binding = FragmentPrincipalBinding.inflate(inflater, container, false);
+        View rootView = binding.getRoot();
+
+        // Inicializando RecyclerView
+        recyclerViewPrincipal = binding.recyclerViewPrincipal;
+
+        // Configurando Adapter:
+        AdapterPrincipal adapterPrincipal = new AdapterPrincipal();
+
+        // Configurando RecyclerView:
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        recyclerViewPrincipal.setLayoutManager(layoutManager);
+        recyclerViewPrincipal.setHasFixedSize(true);
+        recyclerViewPrincipal.setAdapter(adapterPrincipal);
+
+        return rootView;
     }
 }

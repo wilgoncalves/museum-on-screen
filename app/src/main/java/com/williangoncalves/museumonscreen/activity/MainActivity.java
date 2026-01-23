@@ -16,14 +16,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.williangoncalves.museumonscreen.R;
+import com.williangoncalves.museumonscreen.adapter.AdapterPrincipal;
 import com.williangoncalves.museumonscreen.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
-
-    private RecyclerView recyclerViewPrincipal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,12 +51,6 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
-
-        // Configurando RecyclerView:
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
-        recyclerViewPrincipal.setLayoutManager(layoutManager);
-        recyclerViewPrincipal.setHasFixedSize(true);
-        //recyclerViewPrincipal.setAdapter();
     }
 
     public void enviarEmail() {
